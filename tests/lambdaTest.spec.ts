@@ -26,7 +26,7 @@ test.describe("PW Tests for Lambda", async () => {
     });
   });
 
-  test("Lambda Test Scenario 1", async ({ page }) => {
+  test.only("Lambda Test Scenario 1", async ({ page }) => {
     await page.getByRole("link", { name: "Simple Form Demo" }).click();
     await page.getByPlaceholder("Please enter your Message").fill(data.WELCOME_MSG);
     await page.getByRole("button", { name: "Get Checked Value" }).click();
